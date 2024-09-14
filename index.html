@@ -1,0 +1,321 @@
+<!--
+ My personal webpage
+ https://github.com/drfuzzy/drfuzzy.github.io
+ MIT licensed
+
+ Copyright (C) 2010-2024 Dr Kyriakos Deliparaschos
+-->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/solarized.css">
+		<link rel="stylesheet" href="css/scrollable.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!-- <script src="https://raw.githubusercontent.com/pcooksey/bibtex-js/master/src/bibtex_js.js"></script> -->
+		<script type="text/javascript" src="js/bibtex_js.js"></script>
+		<bibtex src="bibtex/publications.bib"></bibtex>
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	
+		<style>
+			/* img {
+				float: left;
+				margin: 5px;
+        	} */
+ 
+        	.small {
+				text-align: justify;
+            	font-size: 18px;
+        	}
+
+			.medium {
+				text-align: center;
+            	font-size: 24px;
+        	}
+
+			.mediumplus {
+				text-align: justify;
+            	font-size: 28px;
+        	}
+
+			.large {
+				text-align: justify;
+            	font-size: 32px;
+        	}
+
+			.reveal .slide:not(.center) {
+    			height: 100%;
+    			overflow-y: auto;
+  			}
+
+			html,body,span,h1 {
+				font-family: sans-serif;
+				font-size: 17px;
+	    	}
+		
+			bibtex {display: none; }
+			.searchbar {margin-left:0px;}
+			#bibtex_errors {margin-top:10px; color: red;}
+			h1.header {margin-left:8px;}
+			h1.YEAR {font-family: Arial ; font-size: 18px; font-weight: bold; display: block; margin-left:8px; font-family: sans-serif}
+		</style>
+	
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="About">
+					<h2>About</h2>
+					<div class="square">
+						<div>
+							<img alt="About photo" src="img/about_v1.jpg" style="float: left; 
+							margin: 5px; width: 20%;">
+						</div>
+						<p class="small"> Dr Kyriakos Deliparaschos received his Ph.D. degree from the Department of Signals, Control, and 
+							Robotics, School of Electrical and Computer Engineering, National Technical University of Athens
+							(NTUA), his M.Sc. degree in Mechatronics from De Montfort University, Leicester, UK, and NTUA, and
+							his B.Eng. Hons degree in Electronics Engineering from De Montfort University. He is Special Teaching
+							Staff at the Department of Electrical Engineering, Computer Engineering, and Informatics. He has been a
+							research fellow with the School of Aerospace, Transport, and Manufacturing (SATM) at Cranfield
+							University and a research associate with NTUA's Intelligent Robotics and Automation Laboratory (IRAL).
+							He was also a postdoctoral research fellow with the CTVR group at Trinity College, Dublin University,
+							and a research associate with the Robotics, Control, and Decision Systems (RCDS) Lab, part of the
+							Mechanical Engineering and Material Science and Engineering Department of CUT. Additionally, he was a
+							member of the Intelligent Automation Systems research group (IAS) at NTUA. Previously, he served as a
+							Lecturer at the University of Greenwich and the University of Hertfordshire in Athens, and as a Lab
+							Assistant at the School of Electrical and Computer Engineering, NTUA. He worked at the Institute of
+							Communications and Computer Systems (ICCS) and participated in several research programs funded by
+							EPAN, EQUAL, and PENED. Furthermore, he worked for INTRACOM S.A. in the departments of VLSI and
+							Communications Systems, and at Great Ormond Street Hospital, London, in the Biomedical Engineering
+							Department.
+						<br/><br/>
+							His work has been published in peer-reviewed international journals, conferences, and book chapters in
+							the areas of robotics, control, and electronics. His main research interests focus on high-performance
+							computing, ASIC/FPGA design, embedded systems and cyber-physical systems, hardware accelerators,
+							mobile robots and robot-assisted surgery, cloud computing, and fault-tolerant control.</p>
+						<div class="medium">
+							<a href="#/publications">Publications</a> &nbsp&nbsp&nbsp<a href="#/research_interests">Research Interests</a> &nbsp&nbsp&nbsp<a href="#/teaching">Teaching</a> &nbsp&nbsp&nbsp<a href="#/professional_service">Professional Service</a> &nbsp&nbsp&nbsp<a href="#/contact_info">Contact Info</a>
+						</div>
+					</div>
+				</section>
+
+				<section id="publications" class="scrollable">
+
+					<!-- <input type="text" class="bibtex_search" list="suggests">
+					<button type="submit" class="bibtex_print">Save</button>
+					
+					<datalist id="suggests">
+						<option value="@author=">
+						<option value="@title=">
+						<option value="@year=">
+						<option value="@journal=">
+					</datalist>
+					
+					<div id="bibtex_errors"></div> -->
+
+					<h2>Publications</h2>
+					
+					<!-- <div class="bibtex_topics"> </div> -->
+					
+					<div class="bibtex_structure">
+						<div class ="group year" extra="DESC number">
+							<div class="templates"></div>
+						</div>
+					</div>
+					
+					<div id="bibtex_display" class="small">
+					
+						<div class="bibtex_template">
+							<ul>
+								<!-- <li> -->
+									<span class="if title">
+										<!-- <a class="url"> -->
+											<span class="title"></span>,
+										<!-- </a> -->
+									</span>
+									<div class="if author">
+										<span class="author"></span>
+									</div>
+									<div>
+										<span class="if journal"><em><span class="journal"></span></em>,</span>
+										<span class="if publisher"><em><span class="publisher"></span></em>,</span>
+										<span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
+										<span class="if address"><span class="address"></span>,</span>
+										<span class="if month"><span class="month"></span>,</span>
+										<span class="if year"><span class="year"></span>.</span>
+										<span class="if note"><span class="note"></span></span>
+									</div>
+								<!-- </li> -->
+								&nbsp;
+							</ul>
+						</div>
+					
+					</div>
+					
+					<div class="medium">
+						<a href="#/0">About</a> &nbsp&nbsp&nbsp<a href="#/research_interests">Research Interests</a> &nbsp&nbsp&nbsp<a href="#/teaching">Teaching</a> &nbsp&nbsp&nbsp<a href="#/professional_service">Professional Service</a> &nbsp&nbsp&nbsp<a href="#/contact_info">Contact Info</a>
+					</div>
+				</section>
+				
+				<section id="research_interests">
+					<h2>Research Interests</h2>
+					<ul class="medium">
+						<li>Embedded systems</li>
+						<li>System-on-a-Chip (SoC) and FPGA design</li>
+						<li>Hardware-in-the-loop and digital twins</li>
+						<li>Sensor fusion and navigation of UAVs and autonomous vehicles</li>
+						<li>Surgical robotics applications</li>
+						<li>FPGA-based hardware acceleration</li>
+						<li>High-Level Synthesis (HLS)</li>
+					</ul>
+					<br/><br/>
+					<div class="medium">
+						<a href="#/0">About</a> &nbsp&nbsp&nbsp<a href="#/publications">Publications</a> &nbsp&nbsp&nbsp<a href="#/teaching">Teaching</a> &nbsp&nbsp&nbsp<a href="#/professional_service">Professional Service</a> &nbsp&nbsp&nbsp<a href="#/contact_info">Contact Info</a>
+					</div>
+				</section>
+
+				<section>
+					<section id="teaching">
+						<h2>Teaching</h2>
+						<!-- <h3>Current Courses</h3> -->
+						<ul class="medium">
+							<li><strong>EEN549</strong> - Advanced VLSI Design and Embedded Systems</li>
+							<li><strong>EEN314</strong> - VLSI Systems Design</li>
+							<li><strong>CEI473</strong> - Embedded Systems</li>
+							<li><strong>CEI122</strong> - Digital Logic</li>
+							<li><strong>EEN319</strong> - Control Systems Lab</li>
+							<li><strong>EEN211</strong> - Circuit Analysis II</li>
+							<li><strong>EEN111</strong> - Circuit Analysis I</li>
+							<li><strong>EEN231.E</strong> - Signals and Systems Lab</li>
+						</ul>
+						<br/><br/>
+						<a href="#/past_courses">Past Courses</a>
+						<br/><br/>
+						<div class="medium">
+							<a href="#/0">About</a> &nbsp&nbsp&nbsp<a href="#/publications">Publications</a> &nbsp&nbsp&nbsp<a href="#/research_interests">Research Interests</a> &nbsp&nbsp&nbsp<a href="#/professional_service">Professional Service</a> &nbsp&nbsp&nbsp<a href="#/contact_info">Contact Info</a>
+						</div>
+					</section>
+					
+					<section id="past_courses" class="scrollable">
+						<a href="#/past_courses"></a><h3>Past Courses</h3>
+						<h4>Cyprus University of Technology</h4>
+						<ul class="medium">
+							<li><strong>EE311</strong> - Control Systems</li>
+							<li><strong>EE317</strong> - Communication Systems</li>
+						</ul>
+					    <br/><br/>
+						<h4>National Technical University of Athens</h4>
+						<ul class="medium">
+							<li>Control and Robotics Systems Lab exercises:<ul class="circle">
+									<li>Three-term (PID) control with analogue circuits</li>
+									<li>Servomechanism (ES230) system analysis</li>
+									<li>Embedded control system (MIDICOM)</li>
+									<li>Design of control systems in MATLAB</li>
+									<li>Automatic control of robotic joint</li>
+									<li>Classic robot (Adept) control (disturbance compensation)</li>
+									<li>Robot (Adept) Programming</li>
+									<li>Mobile robot (RoboSoft) control</li>
+									<li>Robotic (palletizing) cell (FMS)</li>
+									<li>Pendubot control</li>
+									<li>Fuzzy inference and control in MATLAB</li>
+								</ul>
+							</li>
+						</ul>
+						<br/><br/>
+						<h4>Greenwich University (NYC Athens Campus)</h4>
+						<ul class="medium">
+							<li><strong>COMP1171</strong> - Computer & Communication Systems I</li>
+							<li><strong>COMP1588</strong> - Computer Systems Architectures</li>
+							<li><strong>COMP1564</strong> - Systems Programming Technologies</li>
+							<li><strong>COMP1391</strong> - Systems Development</li>
+							<li>Networking Technology (HND)</li>
+							<li>Database concepts (HND)</li>
+						</ul>
+						<br/><br/>
+						<h4>Hertfordshire University (IST Athens Campus)</h4>
+						<ul class="medium">
+							<li><strong>6COM1012</strong> (3FEN0161) - Computer Network Protocols and Architecture</li>
+							<li><strong>7COM0099</strong> (MFEN0100) - Software Development Tools and Methods</li>
+						</ul>
+					</section>
+				</section>
+
+				<section id="professional_service">
+					<h2>Professional Service</h2>
+					<ul class="medium">
+						<li>2001 - 2005: <strong><a href="http://www.intracom-telecom.com" target="self"
+									rel="external">INTRACOM Telecom (Athens)</a></strong><ul class="circle">
+								<li>Microelectronics Lab (VLSI), Broadband Systems Department.</li>
+							</ul>
+						</li>
+						<li>2000 - 2001: <strong><a href="http://www.intracom-telecom.com" target="self"
+									rel="external">INTRACOM Telecom (Athens)</a></strong><ul class="circle">
+								<li>Software Co-Production Department (Ericsson telecommunications center).</li>
+							</ul>
+						</li>
+						<li>1995 - 1996: <strong><a href="http://www.gosh.org" target="self" 
+							rel="external">Great Ormond Street Hospital (London)</a></strong><ul class="circle">
+								<li>Biomedical Engineering Department</li>
+							</ul>
+						</li>
+					</ul>
+					<br/><br/>
+					<div class="medium">
+						<a href="#/0">About</a> &nbsp&nbsp&nbsp<a href="#/publications">Publications</a> &nbsp&nbsp&nbsp<a href="#/research_interests">Research Interests</a> &nbsp&nbsp&nbsp<a href="#/teaching">Teaching</a> &nbsp&nbsp&nbsp<a href="#/contact_info">Contact Info</a>
+					</div>
+				</section>
+
+				<section id="contact_info">
+					<h2>Contact Info</h2>
+					<div id="contentContainer" class="small">
+						<div id="content">
+							<span style="color:#FF9900;"><br /></span><span style="color:#FF9900;">Postal address:</span><br /><a
+								href="http://www.cut.ac.cy" target="self" rel="external"><img class="imageStyle" alt="CUT logo"
+									src="img/cut_logo_en.png" width="140" height="60" /></a><strong><br /></strong><strong><a
+									href="http://www.cut.ac.cy" target="self" rel="external">Cyprus University of
+									Technology<br /></a></strong>Department of Electrical and Computer Engineering and
+							Informatics<br />Office 420 (Tofis building)<br /><span style="color:#FF9900;">Phone: <br /></span>+357
+							2500 2166<br /><span style="color:#FF9900;">Fax:<br /></span>+357 2500 2833<br /><span
+								style="color:#FF9900;">e-mail:<br /></span><a href="mailto:k.deliparaschos@cut.ac.cy"
+								target="self">k.deliparaschos [at] cut [dot] ac [dot] cy</a> <br />
+						</div>
+					</div>
+					<br/>
+					<div class="medium">
+						<a href="#/0">About</a> &nbsp&nbsp&nbsp<a href="#/publications">Publications</a> &nbsp&nbsp&nbsp<a href="#/research_interests">Research Interests</a> &nbsp&nbsp&nbsp<a href="#/teaching">Teaching</a> &nbsp&nbsp&nbsp<a href="#/professional_service">Professional Service</a>
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+						  
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
