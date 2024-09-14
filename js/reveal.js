@@ -938,7 +938,10 @@ export default function( revealElement, options ) {
 	 */
 	function layout() {
 
-		if( dom.wrapper && !isPrintingPDF() ) {
+		if( dom.wrapper && !printView.isActive() ) {
+
+			const viewportWidth = dom.viewport.offsetWidth;
+			const viewportHeight = dom.viewport.offsetHeight;
 
 			if( !config.disableLayout ) {
 
@@ -948,13 +951,15 @@ export default function( revealElement, options ) {
 				// property where 100x adds up to the correct height.
 				//
 				// https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
-				if( isMobileDevice ) {
+				if( Device.isMobile && !config.embedded ) {
 					document.documentElement.style.setProperty( '--vh', ( window.innerHeight * 0.01 ) + 'px' );
 				}
 
-				var size = getComputedSlideSize();
+				const size = scrollView.isActive() ?
+							 getComputedSlideSize( viewportWidth, viewportHeight ) :
+							 getComputedSlideSize();
 
-				var oldScale = scale;
+				const oldScale = scale;
 
 				// Layout the contents of the slides
 				layoutSlideContents( config.width, config.height );
@@ -965,18 +970,13 @@ export default function( revealElement, options ) {
 				// Determine scale of content to fit within available space
 				scale = Math.min( size.presentationWidth / size.width, size.presentationHeight / size.height );
 
-				// NEW LINE
-				if( isMobileDevice ) {
-					scale = Math.min( size.presentationWidth / 400, size.presentationHeight / 600 );
-				}
-				
-
 				// Respect max/min scale settings
 				scale = Math.max( scale, config.minScale );
 				scale = Math.min( scale, config.maxScale );
 
-				// Don't apply any scaling styles if scale is 1
-				if( scale === 1 ) {
+				// Don't apply any scaling styles if scale is 1 or we're
+				// in the scroll view
+				if( scale === 1 || scrollView.isActive() ) {
 					dom.slides.style.zoom = '';
 					dom.slides.style.left = '';
 					dom.slides.style.top = '';
@@ -985,50 +985,26 @@ export default function( revealElement, options ) {
 					transformSlides( { layout: '' } );
 				}
 				else {
-					// Zoom Scaling
-					// Content remains crisp no matter how much we scale. Side
-					// effects are minor differences in text layout and iframe
-					// viewports changing size. A 200x200 iframe viewport in a
-					// 2x zoomed presentation ends up having a 400x400 viewport.
-					if( scale > 1 && features.zoom && window.devicePixelRatio < 2 ) {
-						dom.slides.style.zoom = scale;
-						dom.slides.style.left = '';
-						dom.slides.style.top = '';
-						dom.slides.style.bottom = '';
-						dom.slides.style.right = '';
-						transformSlides( { layout: '' } );
-					}
-					// Transform Scaling
-					// Content layout remains the exact same when scaled up.
-					// Side effect is content becoming blurred, especially with
-					// high scale values on ldpi screens.
-					else {
-						dom.slides.style.zoom = '';
-						dom.slides.style.left = '50%';
-						dom.slides.style.top = '50%';
-						dom.slides.style.bottom = 'auto';
-						dom.slides.style.right = 'auto';
-						transformSlides( { layout: 'translate(-50%, -50%) scale('+ scale +')' } );
-						// NEW LINES
-						if( isMobileDevice ) {
-							dom.slides.style.width = '80vw';
-							dom.slides.style.height = '80vh';
-						}
-					}
+					dom.slides.style.zoom = '';
+					dom.slides.style.left = '50%';
+					dom.slides.style.top = '50%';
+					dom.slides.style.bottom = 'auto';
+					dom.slides.style.right = 'auto';
+					transformSlides( { layout: 'translate(-50%, -50%) scale('+ scale +')' } );
 				}
 
 				// Select all slides, vertical and horizontal
-				var slides = toArray( dom.wrapper.querySelectorAll( SLIDES_SELECTOR ) );
+				const slides = Array.from( dom.wrapper.querySelectorAll( SLIDES_SELECTOR ) );
 
-				for( var i = 0, len = slides.length; i < len; i++ ) {
-					var slide = slides[ i ];
+				for( let i = 0, len = slides.length; i < len; i++ ) {
+					const slide = slides[ i ];
 
 					// Don't bother updating invisible slides
 					if( slide.style.display === 'none' ) {
 						continue;
 					}
 
-					if( config.center || slide.classList.contains( 'center' ) ) {
+					if( ( config.center || slide.classList.contains( 'center' ) ) ) {
 						// Vertical stacks are not centred since their section
 						// children will be
 						if( slide.classList.contains( 'stack' ) ) {
@@ -1036,10 +1012,6 @@ export default function( revealElement, options ) {
 						}
 						else {
 							slide.style.top = Math.max( ( size.height - slide.scrollHeight ) / 2, 0 ) + 'px';
-							// NEW LINES
-							if( isMobileDevice ) {
-							slide.style.top = 1 + 'px';
-							}
 						}
 					}
 					else {
@@ -1049,19 +1021,30 @@ export default function( revealElement, options ) {
 				}
 
 				if( oldScale !== scale ) {
-					dispatchEvent( 'resize', {
-						'oldScale': oldScale,
-						'scale': scale,
-						'size': size
-					} );
+					dispatchEvent({
+						type: 'resize',
+						data: {
+							oldScale,
+							scale,
+							size
+						}
+					});
 				}
 			}
 
-			updateProgress();
-			updateParallax();
+			checkResponsiveScrollView();
 
-			if( isOverview() ) {
-				updateOverview();
+			dom.viewport.style.setProperty( '--slide-scale', scale );
+			dom.viewport.style.setProperty( '--viewport-width', viewportWidth + 'px' );
+			dom.viewport.style.setProperty( '--viewport-height', viewportHeight + 'px' );
+
+			scrollView.layout();
+
+			progress.update();
+			backgrounds.updateParallax();
+
+			if( overview.isActive() ) {
+				overview.update();
 			}
 
 		}
