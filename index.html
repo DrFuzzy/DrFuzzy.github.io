@@ -1,5 +1,5 @@
 <!--
- My personal webpage
+ Dr Kyriakos Deliparaschos personal webpage
  https://github.com/drfuzzy/drfuzzy.github.io
  MIT licensed
 
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/solarized.css">
-		<link rel="stylesheet" href="css/scrollable.css">
+		<!-- <link rel="stylesheet" href="css/scrollable.css"> -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<!-- <script src="https://raw.githubusercontent.com/pcooksey/bibtex-js/master/src/bibtex_js.js"></script> -->
@@ -67,14 +67,38 @@
 			.searchbar {margin-left:0px;}
 			#bibtex_errors {margin-top:10px; color: red;}
 			h1.header {margin-left:8px;}
-			h1.YEAR {font-family: Arial ; font-size: 18px; font-weight: bold; display: block; margin-left:8px; font-family: sans-serif}
+			h1.YEAR {margin-top: 20px; font-family: Arial ; font-size: 18px; font-weight: bold; display: block; margin-left:8px; font-family: sans-serif}
+
+			.scrollable {
+				margin-top: 120px;
+				overflow-y: auto  !important;
+				overflow-x: hidden !important;
+				height: 610px;
+			}
+
+			.sticky {
+				position: sticky;
+				top: 0px;
+				padding: 0px;
+			}
+
+			.move_up {
+				position: relative; /* or absolute/fixed */ 
+				top: 0px; /* Adjust the value as needed */
+			}
+
+			.move_down {
+				position: relative; /* or absolute/fixed */ 
+				bottom: -700px; /* Adjust the value as needed */
+			}
+
 		</style>
 	
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section id="About">
+				<section id="about">
 					<h2>About</h2>
 					<div class="square">
 						<div>
@@ -109,8 +133,10 @@
 					</div>
 				</section>
 
-				<section id="publications" class="scrollable">
-
+				<section id="publications">
+					<div class="sticky">
+						<h2>Publications</h2>
+					</div>
 					<!-- <input type="text" class="bibtex_search" list="suggests">
 					<button type="submit" class="bibtex_print">Save</button>
 					
@@ -122,49 +148,48 @@
 					</datalist>
 					
 					<div id="bibtex_errors"></div> -->
-
-					<h2>Publications</h2>
 					
 					<!-- <div class="bibtex_topics"> </div> -->
-					
-					<div class="bibtex_structure">
-						<div class ="group year" extra="DESC number">
-							<div class="templates"></div>
+
+					<section class="scrollable">
+						<div class="bibtex_structure">
+							<div class ="group year" extra="DESC number">
+								<div class="templates"></div>
+							</div>
 						</div>
-					</div>
-					
-					<div id="bibtex_display" class="small">
-					
-						<div class="bibtex_template">
-							<ul>
-								<!-- <li> -->
-									<span class="if title">
-										<!-- <a class="url"> -->
-											<span class="title"></span>,
-										<!-- </a> -->
-									</span>
-									<div class="if author">
-										<span class="author"></span>
-									</div>
-									<div>
-										<span class="if journal"><em><span class="journal"></span></em>,</span>
-										<span class="if publisher"><em><span class="publisher"></span></em>,</span>
-										<span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
-										<span class="if address"><span class="address"></span>,</span>
-										<span class="if month"><span class="month"></span>,</span>
-										<span class="if year"><span class="year"></span>.</span>
-										<span class="if note"><span class="note"></span></span>
-									</div>
-								<!-- </li> -->
-								&nbsp;
-							</ul>
+
+						<div id="bibtex_display" class="small">
+							<div class="bibtex_template">
+								<ul>
+									<!-- <li> -->
+										<span class="if title">
+											<!-- <a class="url"> -->
+												<span class="title"></span>,
+											<!-- </a> -->
+										</span>
+										<div class="if author">
+											<span class="author"></span>
+										</div>
+										<div>
+											<span class="if journal"><em><span class="journal"></span></em>,</span>
+											<span class="if publisher"><em><span class="publisher"></span></em>,</span>
+											<span class="if booktitle">In <em><span class="booktitle"></span></em>,</span>
+											<span class="if address"><span class="address"></span>,</span>
+											<span class="if month"><span class="month"></span>,</span>
+											<span class="if year"><span class="year"></span>.</span>
+											<span class="if note"><span class="note"></span></span>
+										</div>
+									<!-- </li> -->
+									&nbsp;
+								</ul>
+							</div>
 						</div>
-					
-					</div>
-					
-					<div class="medium">
-						<a href="#/0">About</a> &nbsp&nbsp&nbsp<a href="#/research_interests">Research Interests</a> &nbsp&nbsp&nbsp<a href="#/teaching">Teaching</a> &nbsp&nbsp&nbsp<a href="#/professional_service">Professional Service</a> &nbsp&nbsp&nbsp<a href="#/contact_info">Contact Info</a>
-					</div>
+
+						<div class="medium">
+							<a href="#/0">About</a> &nbsp&nbsp&nbsp<a href="#/research_interests">Research Interests</a> &nbsp&nbsp&nbsp<a href="#/teaching">Teaching</a> &nbsp&nbsp&nbsp<a href="#/professional_service">Professional Service</a> &nbsp&nbsp&nbsp<a href="#/contact_info">Contact Info</a>
+						</div>
+					</section>
+
 				</section>
 				
 				<section id="research_interests">
@@ -316,12 +341,10 @@
 				height: 700,
 				margin: 0.04,
 				minScale: 0.2,
-				maxScale: 2,
+				maxScale: 1.2,
 				scrollActivationWidth: true,
-				mobileViewDistance: 2
+				mobileViewDistance: 2,
 			});
-
-			scrollProgress: 'auto';
 
 		</script>
 						  
