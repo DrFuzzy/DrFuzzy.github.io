@@ -4,8 +4,8 @@ Welcome to the repository for my personal website, hosted at [drfuzzy.github.io]
 
 ## Resources
 
-This website relies on the following external libraries:
-- **[Reveal.js](https://github.com/hakimel/reveal.js)**: A framework for creating elegant presentations that integrate seamlessly into the website.
+This website relies on the following:
+- **[Quarto](https://quarto.org)**: An open-source scientific and technical publishing system.
 - **[Bibtex-js](https://github.com/pcooksey/bibtex-js)**: A JavaScript library for rendering BibTeX citations directly in the browser.
 
 ## Licence
