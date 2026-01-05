@@ -1,0 +1,38 @@
+name: Publish Quarto Site
+
+on:
+  push:
+    branches:
+      - quarto
+    paths-ignore:
+      - README.md
+      - README.*
+      - LICENSE.txt
+      - LICENSE.*
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Render site (clean)
+        run: quarto render --clean
+
+      - name: Publish to gh-pages
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
