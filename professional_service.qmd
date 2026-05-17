@@ -3,17 +3,14 @@ title: "Professional Service"
 format: html
 ---
 
-<ul>
-    <li>2001 - 2005: <strong><a href="http://www.intracom-telecom.com" target="self"
-        rel="external">INTRACOM Telecom (Athens)</a></strong><ul class="circle">
-        <li>Microelectronics Lab (VLSI), Broadband Systems Department.</ul></li>
-    </li>
-    <li>2000 - 2001: <strong><a href="http://www.intracom-telecom.com" target="self"
-        rel="external">INTRACOM Telecom (Athens)</a></strong><ul class="circle">
-        <li>Software Co-Production Department (Ericsson telecommunications center).</ul></li>
-    </li>
-    <li>1995 - 1996: <strong><a href="http://www.gosh.org" target="self" 
-        rel="external">Great Ormond Street Hospital (London)</a></strong><ul class="circle">
-        <li>Biomedical Engineering Department</li>
-    </li>
-</ul>
+## Industry and Professional Experience {.course-institution}
+
+::: {.professional-service-table}
+
+| Period | Organization | Role / Department |
+|---|---|---|
+| 2001–2005 | **[INTRACOM Telecom, Athens](http://www.intracom-telecom.com)** | Microelectronics Lab (VLSI), Broadband Systems Department |
+| 2000–2001 | **[INTRACOM Telecom, Athens](http://www.intracom-telecom.com)** | Software Co-Production Department, Ericsson telecommunications center |
+| 1995–1996 | **[Great Ormond Street Hospital, London](http://www.gosh.org)** | Biomedical Engineering Department |
+
+:::

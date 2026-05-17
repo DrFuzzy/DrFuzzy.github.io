@@ -1,5 +1,5 @@
 ---
-title: "Publications"
+pagetitle: "Publications"
 format: html
 resources:
     - "bibtex/publications.bib"

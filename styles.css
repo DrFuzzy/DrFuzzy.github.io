@@ -1,6 +1,188 @@
 /* css styles */
 
-html,body,span{
-    font-family: "Helvetica", Times, serif;
-    font-size: 17px;
+html, body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.profile-hero {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-photo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-photo img {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin-top: 0.6rem;
+}
+
+.profile-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 0.1rem;
+  transform: translateY(-0.25rem);
+}
+
+.profile-text {
+  flex: 1;
+  text-align: justify;
+}
+
+.profile-text h2:first-child {
+  margin-top: 0;
+}
+
+.profile-icons a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icons a:hover {
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* ORCID icon */
+.profile-icons a.orcid-icon:hover {
+  color: #A6CE39;
+  border-color: #A6CE39;
+}
+
+/* Publications search bar */
+.pubs-search-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.searchbar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.pubs-search-control {
+  border: 1px solid lightgrey;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.pubs-search-box {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Remove underline from institution headings */
+.course-institution {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.quick-links {
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+.quick-links p {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+}
+
+.quick-links .btn {
+  margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: 0.35rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+img.cut-logo {
+  width: 170px;
+  max-width: 170px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.bio-text {
+  text-align: justify;
+}
+
+/* Publications page layout */
+.pubs-wrapper {
+  padding-top: 1.6rem;
+}
+
+h1.pubs-title {
+  font-weight: 700;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Align heading spacing on course pages */
+.current-courses h2:first-child,
+.past-courses h2:first-child {
+  margin-top: 1rem;
+}
+
+/* Professional Service table */
+.professional-service-table table th:first-child,
+.professional-service-table table td:first-child {
+  width: 120px;
+  min-width: 120px;
+  white-space: nowrap;
+}
+
+.pubs-search-first-author {
+  max-width: 230px;
+}
+
+@media (max-width: 768px) {
+  .profile-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-photo img {
+    width: 180px;
+  }
+
+  .profile-text {
+    text-align: left;
+  }
 }

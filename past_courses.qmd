@@ -3,40 +3,51 @@ title: "Past Courses"
 format: html
 ---
 
-<h4>Cyprus University of Technology</h4>
-<ul>
-    <li><strong>EE311</strong> - Control Systems</li>
-    <li><strong>EE317</strong> - Communication Systems</li>
-</ul>
-<h4>National Technical University of Athens</h4>
-<ul>
-    <li>Control and Robotics Systems Lab exercises:<ul class="circle">
-            <li>Three-term (PID) control with analogue circuits</li>
-            <li>Servomechanism (ES230) system analysis</li>
-            <li>Embedded control system (MIDICOM)</li>
-            <li>Design of control systems in MATLAB</li>
-            <li>Automatic control of robotic joint</li>
-            <li>Classic robot (Adept) control (disturbance compensation)</li>
-            <li>Robot (Adept) Programming</li>
-            <li>Mobile robot (RoboSoft) control</li>
-            <li>Robotic (palletizing) cell (FMS)</li>
-            <li>Pendubot control</li>
-            <li>Fuzzy inference and control in MATLAB</li>
-    </li></ul>
-</ul>
+## Cyprus University of Technology {.course-institution}
 
-<h4>Greenwich University (NYC Athens Campus)</h4>
-<ul>
-    <li><strong>COMP1171</strong> - Computer & Communication Systems I</li>
-    <li><strong>COMP1588</strong> - Computer Systems Architectures</li>
-    <li><strong>COMP1564</strong> - Systems Programming Technologies</li>
-    <li><strong>COMP1391</strong> - Systems Development</li>
-    <li>Networking Technology (HND)</li>
-    <li>Database concepts (HND)</li>
-</ul>
+| Code | Course |
+|---|---|
+| **EEN549** | Advanced VLSI Design and Embedded Systems |
+| **CEI473** | Embedded Systems |
+| **EEN319** | Control Systems Lab |
+| **EEN231.E** | Signals and Systems Lab |
+| **EE311** | Control Systems |
+| **EE317** | Communication Systems |
 
-<h4>Hertfordshire University (IST Athens Campus)</h4>
-<ul>
-    <li><strong>6COM1012</strong> (3FEN0161) - Computer Network Protocols and Architecture</li>
-    <li><strong>7COM0099</strong> (MFEN0100) - Software Development Tools and Methods</li>
-</ul>
+## National Technical University of Athens {.course-institution}
+
+| Code | Course |
+|---|---|
+| — | Control and Robotics Systems Lab exercises |
+
+Lab exercises included:
+
+- Three-term (PID) control with analogue circuits
+- Servomechanism (ES230) system analysis
+- Embedded control system (MIDICOM)
+- Design of control systems in MATLAB
+- Automatic control of robotic joint
+- Classic robot (Adept) control (disturbance compensation)
+- Robot (Adept) programming
+- Mobile robot (RoboSoft) control
+- Robotic palletizing cell (FMS)
+- Pendubot control
+- Fuzzy inference and control in MATLAB
+
+## University of Greenwich, NYC Athens Campus {.course-institution}
+
+| Code | Course |
+|---|---|
+| **COMP1171** | Computer & Communication Systems I |
+| **COMP1588** | Computer Systems Architectures |
+| **COMP1564** | Systems Programming Technologies |
+| **COMP1391** | Systems Development |
+| — | Networking Technology (HND) |
+| — | Database Concepts (HND) |
+
+## University of Hertfordshire, IST Athens Campus {.course-institution}
+
+| Code | Course |
+|---|---|
+| **6COM1012** / **3FEN0161** | Computer Network Protocols and Architecture |
+| **7COM0099** / **MFEN0100** | Software Development Tools and Methods |

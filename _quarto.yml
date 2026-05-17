@@ -6,22 +6,28 @@ project:
     - "publications.qmd"
     - "current_courses.qmd"
     - "past_courses.qmd"
+    - "professional_service.qmd"
     - "contact_info.qmd"
 website:
-  title: "Dr Kyriakos Deliparaschos"
+  title: "Kyriakos M. Deliparaschos"
   navbar:
     left:
       - text: About
         href: about.qmd
-      - research_interests.qmd
-      - publications.qmd
+      - text: Research Interests
+        href: research_interests.qmd
+      - text: Publications
+        href: publications.qmd
       - text: Teaching
         menu:
-        - current_courses.qmd
-        - past_courses.qmd
-      - professional_service.qmd
-      - contact_info.qmd
-
+          - text: Current Courses
+            href: current_courses.qmd
+          - text: Past Courses
+            href: past_courses.qmd
+      - text: Professional Service
+        href: professional_service.qmd
+      - text: Contact Info
+        href: contact_info.qmd
 format:
   html:
     theme: flatly

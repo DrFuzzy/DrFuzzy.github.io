@@ -2,10 +2,18 @@
 title: "Research Interests"
 ---
 
-- Embedded systems
-- System-on-a-Chip (SoC) and FPGA design
-- Hardware-in-the-loop and digital twins
-- Sensor fusion and navigation of UAVs and autonomous vehicles
-- Surgical robotics applications
+My research interests focus on digital hardware systems for embedded and cyber-physical applications, with emphasis on FPGA/SoC design, hardware acceleration, and real-time implementation.
+
+## Core Research Areas
+
+- VLSI, FPGA and System-on-Chip (SoC) design
 - FPGA-based hardware acceleration
-- High-Level Synthesis (HLS)
+- High-Level Synthesis (HLS) and hardware/software co-design
+- Embedded systems and edge devices
+
+## Application Domains
+
+- Control, estimation, and sensor fusion
+- UAVs, autonomous vehicles, and mobile robotic systems
+- Hardware-in-the-loop systems and digital twins
+- Surgical robotics applications

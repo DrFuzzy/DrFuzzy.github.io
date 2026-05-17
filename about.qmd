@@ -1,10 +1,63 @@
 ---
-title: "About"
+title: "Kyriakos M. Deliparaschos"
+subtitle: "VLSI/FPGA Design · Embedded Systems · Hardware Acceleration"
+image: img/about_v1.jpg
 ---
 
-<div style="text-align: justify">
-<img alt="About photo" src="img/about_v1.jpg" style="float: left; margin: 5px; width: 20%;">
-Dr Kyriakos Deliparaschos received his Ph.D. degree from the Department of Signals, Control, and Robotics, School of Electrical and Computer Engineering, National Technical University of Athens (NTUA), his M.Sc. degree in Mechatronics from De Montfort University, Leicester, UK, and NTUA, and his B.Eng. Hons degree in Electronics Engineering from De Montfort University. He is Special Teaching Staff at the Department of Electrical Engineering, Computer Engineering, and Informatics. He has been a research fellow with the School of Aerospace, Transport, and Manufacturing (SATM) at Cranfield University and a research associate with NTUA's Intelligent Robotics and Automation Laboratory (IRAL). He was also a postdoctoral research fellow with the CTVR group at Trinity College, Dublin University, and a research associate with the Robotics, Control, and Decision Systems (RCDS) Lab, part of the Mechanical Engineering and Material Science and Engineering Department of CUT. Additionally, he was a member of the Intelligent Automation Systems research group (IAS) at NTUA. Previously, he served as a Lecturer at the University of Greenwich and the University of Hertfordshire in Athens, and as a Lab Assistant at the School of Electrical and Computer Engineering, NTUA. He worked at the Institute of Communications and Computer Systems (ICCS) and participated in several research programs funded by EPAN, EQUAL, and PENED. Furthermore, he worked for INTRACOM S.A. in the departments of VLSI and Communications Systems, and at Great Ormond Street Hospital, London, in the Biomedical Engineering Department.
+<div class="profile-hero">
 
-His work has been published in peer-reviewed international journals, conferences, and book chapters in the areas of robotics, control, and electronics. His main research interests focus on high-performance computing, ASIC/FPGA design, embedded systems and cyber-physical systems, hardware accelerators, mobile robots and robot-assisted surgery, cloud computing, and fault-tolerant control.
+<div class="profile-photo">
+<img src="img/about_v1.jpg" alt="Kyriakos M. Deliparaschos">
+
+<div class="profile-icons">
+  <a href="https://scholar.google.com/citations?user=EAI9gjEAAAAJ" title="Google Scholar" aria-label="Google Scholar">
+    <i class="bi bi-mortarboard-fill"></i>
+  </a>
+  <a href="https://orcid.org/0000-0003-0618-5846" class="orcid-icon" title="ORCID" aria-label="ORCID">
+    <i class="bi bi-person-badge-fill"></i>
+  </a>
+  <a href="https://github.com/DrFuzzy" title="GitHub" aria-label="GitHub">
+    <i class="bi bi-github"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/kyriakos-deliparaschos-a8651b21/" title="LinkedIn" aria-label="LinkedIn">
+    <i class="bi bi-linkedin"></i>
+  </a>
+</div>
+
+</div>
+
+<div class="profile-text">
+
+## Welcome
+
+I am a Special Teaching Staff member at the Department of Electrical Engineering, Computer Engineering, and Informatics, Cyprus University of Technology.
+
+My work focuses on VLSI/FPGA design, embedded systems, hardware acceleration, cyber-physical systems, robotics, control, and edge-computing applications.
+
+This website includes information about my research, publications, teaching activities, course material, and contact details.
+
+<div class="quick-links">
+
+[Research](research_interests.qmd){.btn .btn-primary}
+[Publications](publications.qmd){.btn .btn-primary}
+[Teaching](current_courses.qmd){.btn .btn-primary}
+[Service](professional_service.qmd){.btn .btn-primary}
+[Contact](contact_info.qmd){.btn .btn-primary}
+
+</div>
+
+</div>
+
+</div>
+
+## Brief biography
+
+<div class="bio-text">
+
+Dr Kyriakos M. Deliparaschos is a Senior Member of the IEEE. He received his B.Eng. (Hons) degree in Electronics Engineering and his M.Sc. degree in Mechatronics from De Montfort University, UK, and the National Technical University of Athens (NTUA), Greece. He earned his Ph.D. degree from the Department of Signals, Control and Robotics, School of Electrical and Computer Engineering, NTUA.
+
+He is currently a Special Teaching Staff member in the Department of Electrical Engineering, Computer Engineering, and Informatics at the Cyprus University of Technology (CUT). He has held academic and research positions at the National Technical University of Athens, Greece, New York College and IST College in Athens, Greece, the Cyprus University of Technology, Trinity College Dublin, Ireland, and Cranfield University, UK.
+
+His research interests include FPGA/SoC design, embedded and cyber-physical systems, hardware acceleration, robotic and UAV systems, and robot-assisted surgery. His work has been published in peer-reviewed international journals, conferences, and book chapters in the areas of robotics, control, electronics, embedded systems, and digital hardware design.
+
 </div>
