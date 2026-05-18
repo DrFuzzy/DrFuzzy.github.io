@@ -172,17 +172,81 @@ h1.pubs-title {
   max-width: 230px;
 }
 
+.research-text {
+  text-align: justify;
+}
+
 @media (max-width: 768px) {
   .profile-hero {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .profile-photo {
+    width: 100%;
+    align-items: center;
   }
 
   .profile-photo img {
     width: 180px;
+    margin-top: 0;
+  }
+
+  .profile-icons {
+    transform: none;
   }
 
   .profile-text {
-    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    text-align: justify;
+  }
+
+  .quick-links {
+    width: 100%;
+  }
+
+  .quick-links p {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+
+  .quick-links .btn {
+    font-size: 0.9rem;
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+  }
+
+  .searchbar {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .pubs-search-control {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .pubs-search-box {
+    flex: 1 1 100%;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .research-text {
+  text-align: justify;
+  }
+
+  .professional-service-table table th:first-child,
+  .professional-service-table table td:first-child {
+    width: 4.2rem;
+    min-width: 4.2rem;
+    max-width: 4.2rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 }
+

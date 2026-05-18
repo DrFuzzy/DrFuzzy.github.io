@@ -2,7 +2,11 @@
 title: "Research Interests"
 ---
 
+<div class="research-text">
+
 My research interests focus on digital hardware systems for embedded and cyber-physical applications, with emphasis on FPGA/SoC design, hardware acceleration, and real-time implementation.
+
+</div>
 
 ## Core Research Areas
 
