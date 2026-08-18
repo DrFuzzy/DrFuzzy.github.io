@@ -67,10 +67,10 @@ After this step, the site is live at:
 To host the website on the CUT server (vlsi.cut.ac.cy), synchronise the latest rendered site using:
 
 ```bash
-rsync -avz --delete \
+rsync -avz --delete --no-perms --chmod=D755,F644 \
   -e "ssh -p 3440" \
   _site/ \
-  vlsi@vlsi.cut.ac.cy:/var/www/html/vlsi/
+  vlsi@dicl.cut.ac.cy:/var/www/html/vlsi/
 ```
 
 Note: This assumes _site has already been updated by running:
