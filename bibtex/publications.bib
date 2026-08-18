@@ -538,3 +538,42 @@
   year      = {2026},
   note      = {Accepted, to be presented}
 }
+
+@inproceedings{neofytou_fpga-accelerated_2026,
+  author    = {Kyriakos Deliparaschos and Nikolas Perentos},
+  title     = {FPGA-Accelerated Onboard Perception for an Indoor Quadrotor UAV},
+  booktitle = {Conference on IEEE 31st International Conference on Emerging Technologies and Factory Automation (ETFA)},
+  year      = {2026},
+  note      = {Accepted, to be presented}
+}
+
+@Article{huang_memory_2026,
+  AUTHOR = {Huang, Xuefei and Zhang, Zihan and Deliparaschos, Kyriakos M.},
+  TITLE = {A Memory-Centric SoC-FPGA Framework for Incremental 2D Delaunay Triangulation},
+  JOURNAL = {Computers},
+  VOLUME = {15},
+  YEAR = {2026},
+  NUMBER = {8},
+  ARTICLE-NUMBER = {498},
+  URL = {https://www.mdpi.com/2073-431X/15/8/498},
+  ISSN = {2073-431X},
+  ABSTRACT = {Incremental two-dimensional (2D) Delaunay triangulation is a fundamental operation in point-cloud processing and surface reconstruction, yet its irregular memory access and dynamically evolving topology make efficient hardware implementation difficult. Conventional point-location strategies validate many candidate triangles, limiting efficiency on resource-constrained embedded platforms. This paper presents a unified System-on-Chip Field-Programmable Gate Array (SoC-FPGA) framework that instantiates two design points: an acceleration-oriented variant that lowers latency for small-to-medium inputs and a scalability-oriented variant that extends input capacity. Both share a common backbone: a Doubly Connected Edge List (DCEL) topology, a structure-of-arrays memory layout with heterogeneous on-chip binding, a Hilbert-ordered insertion sequence, and a grid-assisted scheme that turns global point location into a bounded local search. Implemented on the AMD Kria KR260, the deployed PS–PL system executes the Delaunay triangulation in the programmable logic, while the ARM Cortex-A53 processor manages accelerator control, data transfer, and end-to-end timing. For a 6000-point input, the acceleration-oriented variant requires 482.25 ms in RTL co-simulation, corresponding to a 32.7× speedup over the same-flow Vitis C-simulation reference on an Intel workstation. Its measured PS–PL end-to-end runtime is 315.919±0.042 ms, achieving a 1.96× speedup over a CPU-only Cortex-A53 implementation on the same KR260 platform and a separately reported 50.0× speedup over the workstation Vitis C-simulation reference. The scalability-oriented variant completes the same input in 868.51 ms and reduces the point-location fallback rate from 12.6% to 2.9%. On a 16,000-point set that exceeds the acceleration-oriented variant’s on-chip budget, it finishes in 4360.6 ms in RTL co-simulation, corresponding to a 19.0× speedup over its same-flow workstation Vitis C-simulation reference. The framework thus provides explicit, tunable trade-offs between latency and scalability within a single architectural template, offering a practical solution for embedded geometric preprocessing.},
+  DOI = {10.3390/computers15080498}
+}
+
+@misc{christodoulides_lightweight_gated_2026,
+  title={Lightweight Gated Recurrent Unit Variants for Real-Time Channel Prediction}, 
+  author={Kyriakos Christodoulides and Kyriakos M. Deliparaschos and Risto Wichman and Themistoklis Charalambous},
+  year={2026},
+  eprint={2607.20697},
+  archivePrefix={arXiv},
+  primaryClass={eess.SP},
+  url={https://arxiv.org/abs/2607.20697}, 
+}
+
+@inproceedings{christodoulides_lightweight_stability_2026,
+  title={A Lightweight Stability-Aware GRU for Real-Time MIMO Channel Prediction}, 
+  author={Kyriakos Christodoulides and Themistoklis Charalambous and Kyriakos M. Deliparaschos and Risto Wichman},
+  year={2026},
+  booktitle={2026 IEEE International Workshop on Computer Aided Modeling and Design of Communication Links and Networks},
+}
